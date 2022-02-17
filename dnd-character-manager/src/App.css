@@ -1,20 +1,29 @@
-/* container on navtab */
+/* container on card opts */
 .container{
- 
-/* flex-flow: row;
-  width: 25%;
-  align-items: center;
-  justify-content: space-evenly; */
  display: grid;
  grid-auto-flow: row;
 }
-/* pg options */
+
+/* card options */
 .navtab{
    flex:  auto ;
   display: inline-block; 
   align-self: center;
   padding: 1%;
   margin: 5%;
+}
+
+.headercontainer{
+  display: grid;
+  grid-auto-flow: row;
+ }
+.headertab{
+  flex:  auto ;
+  grid-row: 1;
+ display: inline-block; 
+ align-self: center;
+ padding: 1%;
+ margin: 5%;
 }
 
 
