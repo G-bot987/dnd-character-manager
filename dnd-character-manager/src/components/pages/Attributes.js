@@ -1,11 +1,13 @@
 import React from "react";
 
 import Attbox from "./Attbox";
-export default function Attributes() {
-  return <div className="attributes container">
+export default function Attributes({ attributeInformation }) {
+  console.log(attributeInformation);
 
-
-  <p>this is attributes</p>
-  <Attbox />
-  </div>
+  return (
+    <div className="attributes container">
+      <p>this is attributes</p>
+      <Attbox attributeInformation={attributeInformation} />
+    </div>
+  );
 }

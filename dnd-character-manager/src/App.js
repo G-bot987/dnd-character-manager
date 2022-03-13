@@ -5,18 +5,20 @@ import Header from "./components/Header";
 import Bio from "./components/pages/Bio";
 import Attributes from "./components/pages/Attributes";
 import Notes from "./components/pages/Notes";
+// attribute import
+import attributeInformation from "./data/attributestodisplay";
 
 function App() {
   // use state hook to render different pg's
 
   const [pg, setCurrentPG] = useState(`bio`);
-
+  const [data, setData] = useState(attributeInformation);
   const renderPage = () => {
     if (pg === "bio") {
       return <Bio />;
     }
     if (pg === "attributes") {
-      return <Attributes />;
+      return <Attributes attributeInformation={data} />;
     }
     if (pg === "notes") {
       return <Notes />;
