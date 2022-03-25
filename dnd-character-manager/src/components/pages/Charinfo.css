@@ -1,0 +1,26 @@
+.char-info-container{
+    max-height: 10rem;
+    display: flex;
+    margin: 1rem;
+}
+
+
+.name-container{
+    padding: 0.5rem;
+}
+.class-container{
+    padding: 0.5rem;
+}
+
+
+.race-container{
+    padding: 0.5rem;
+}
+
+.xp-container{
+    padding: 0.5rem;
+}
+
+.alignment-container{
+    padding: 0.5rem;
+}
