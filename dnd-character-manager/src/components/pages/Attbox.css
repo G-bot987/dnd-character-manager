@@ -1,0 +1,15 @@
+.attribute-container{
+    display: flex;
+    border: 5px;
+    border-color: black;
+    max-width: 7rem;
+    max-height: 20rem;
+    margin-left: 20rem;
+    background-color: green;
+}
+
+
+.attribute-box{
+display: flex;
+margin-right: 2rem;
+}
