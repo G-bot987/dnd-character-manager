@@ -5,13 +5,12 @@ export default function Attbox({ attributeInformation }) {
   return (
     <div className="attribute-container">
       i am attribute-container
-      <ul>
-        {attributeInformation.map(({ attname }, index) => (
-          <li className="list-group-item" key={index}>
-            {index}
-          </li>
-        ))}
-      </ul>
+      {attributeInformation.map(({ attname }, index) => (
+        <ul>
+          <li className="list-group-item" id={index} key={index}>
+        {attname}</li>
+        </ul>
+      ))}
       <div className="attribute-box">
         <div className="attribute-display">
           <div className="modifer-display"></div>
