@@ -6,9 +6,9 @@ export default function Attbox({ attributeInformation }) {
   return (
     <div className="attribute-container">
       <ul>
-        {attributeInformation.map(({ attname }, index) => (
+        {attributeInformation.map(({ attname, score }, index) => (
           <li className="attribute-box" id={index} key={index}>
-            {attname}
+            {attname} {score}
           </li>
         ))}
       </ul>
