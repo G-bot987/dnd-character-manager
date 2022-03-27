@@ -3,15 +3,18 @@ import Attbox from "./Attbox";
 import Charinfo from "./Charinfo";
 import "./Attributes.css";
 
-
 export default function Attributes({ character }) {
-  console.log(character);
- 
+  console.log(character.profile.avatar);
 
   return (
     <div className="card-container">
       <p>this is attributes</p>
-      <Charinfo character={character}/>
+      <div
+        className="avatar-img"
+        style={{ backgroundImage: `url(${character.profile.avatar})` }}
+      ></div>
+
+      <Charinfo character={character} />
       <Attbox character={character} />
     </div>
   );
