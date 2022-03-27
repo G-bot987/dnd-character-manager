@@ -4,14 +4,15 @@ import Charinfo from "./Charinfo";
 import "./Attributes.css";
 
 
-export default function Attributes({ attributeInformation }) {
-  console.log(attributeInformation);
+export default function Attributes({ character }) {
+  console.log(character);
+ 
 
   return (
     <div className="card-container">
       <p>this is attributes</p>
       <Charinfo/>
-      <Attbox attributeInformation={attributeInformation} />
+      <Attbox character={character} />
     </div>
   );
 }
