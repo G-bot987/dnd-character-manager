@@ -1,0 +1,22 @@
+.skill-container{
+    display: flex;
+    border-style: solid;
+    border-color: black;
+    border-radius: 2rem;
+    border-width: 0.2rem;
+    margin: 3rem;
+    background-color: cornsilk;
+    justify-content: center;
+}
+
+
+.skill-box{
+display: flex;
+border-style: solid;
+border-color: black;
+border-radius: 2rem;
+border-width: 0.2rem;
+margin: 0.2rem;
+justify-content: center;
+padding: 0.1rem;
+}
