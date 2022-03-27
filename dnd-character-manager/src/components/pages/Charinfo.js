@@ -23,8 +23,12 @@ export default function Charinfo({ character }) {
 
       <div className="quality-container">
         <p className="defined">background: {character.profile.background}</p>
-        <p className="defined">strength: {character.profile.strength}</p>
-        <p className="defined">weakness: {character.profile.weakness}</p>
+        <p className="defined-background">
+          strength: {character.profile.strength}
+        </p>
+        <p className="defined-background">
+          weakness: {character.profile.weakness}
+        </p>
       </div>
     </div>
   );
