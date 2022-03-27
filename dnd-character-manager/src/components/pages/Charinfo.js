@@ -5,34 +5,26 @@ export default function Charinfo({ character }) {
   return (
     <div className="char-info-container">
       <div className="quality-container">
-        <p>Name:</p>
-        <p>{character.profile.charName}</p>
+        <p className="defined">Name: {character.profile.charName}</p>
       </div>
       <div className="quality-container">
-        <p>xp:</p>
-        <p>{character.profile.xp}</p>
+        <p className="defined">xp: {character.profile.xp}</p>
       </div>
       <div className="quality-container">
-        <p>lv:</p>
-        <p>{character.profile.lv}</p>
+        <p className="defined">lv: {character.profile.lv}</p>
       </div>
       <div className="quality-container">
-        <p>class:</p>
-        <p>{character.profile.class}</p>
+        <p className="defined">class: {character.profile.class}</p>
       </div>
 
       <div className="quality-container">
-        <p>race:</p>
-        <p>{character.profile.race}</p>
+        <p className="defined">race: {character.profile.race}</p>
       </div>
 
-      <div className="background-container">
-        <p>background:</p>
-        <p>{character.profile.background}</p>
-        <p>strength:</p>
-        <p>{character.profile.strength}</p>
-        <p>weakness:</p>
-        <p>{character.profile.weakness}</p>
+      <div className="quality-container">
+        <p className="defined">background: {character.profile.background}</p>
+        <p className="defined">strength: {character.profile.strength}</p>
+        <p className="defined">weakness: {character.profile.weakness}</p>
       </div>
     </div>
   );
