@@ -11,7 +11,7 @@ export default function Attributes({ character }) {
   return (
     <div className="card-container">
       <p>this is attributes</p>
-      <Charinfo/>
+      <Charinfo character={character}/>
       <Attbox character={character} />
     </div>
   );
