@@ -16,8 +16,11 @@ export default function Attributes({ character }) {
       ></div>
 
       <Charinfo character={character} />
+      <div className="card-body">
+
       <Attbox character={character} />
       <Skillspg skillsTemplate={skillsTemplate} />
+      </div>
     </div>
   );
 }
