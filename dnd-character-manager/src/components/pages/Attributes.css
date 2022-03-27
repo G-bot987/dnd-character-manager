@@ -2,12 +2,27 @@
 .card-container{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-style: solid;
+    border-color: black;
+    border-radius: 2rem;
+    border-width: 0.2rem;
+    margin: 0.2rem;
+    background-color: cornsilk;
+    justify-content: flex-start;
 }
 
 .avatar-img{
     border-radius: 50%;
-    max-width: 400px;
-    height: 400px;
-    background-size: cover;
-    margin: 2rem;
+    width: 20rem;
+    height:20rem;
+    background-size: cover;  
+    margin: auto;
+    
 }
