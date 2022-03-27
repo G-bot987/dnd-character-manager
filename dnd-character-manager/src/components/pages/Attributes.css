@@ -6,6 +6,8 @@
 
 .avatar-img{
     border-radius: 50%;
-    max-width: 25%;
-    max-height: 25%;
+    max-width: 400px;
+    height: 400px;
+    background-size: cover;
+    margin: 2rem;
 }
