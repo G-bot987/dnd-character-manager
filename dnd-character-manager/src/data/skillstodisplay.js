@@ -1,4 +1,4 @@
-export const skillsInformation = {
+export const skillsTemplate = {
   skills: [
     { skillname: "acrobatics" },
     { skillname: "animal handling" },
@@ -23,3 +23,5 @@ export const skillsInformation = {
     { skillname: "survival" },
   ],
 };
+
+export default skillsTemplate;
