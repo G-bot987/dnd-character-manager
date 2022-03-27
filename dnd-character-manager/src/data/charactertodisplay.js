@@ -1,3 +1,4 @@
+import img from '../images/nimrodel.png'
 const character = {
   profile: {
     charName: "Nimrodel",
@@ -8,7 +9,7 @@ const character = {
     background: "scion of a fallen house",
     strength: "loyalty",
     weakness: "unconcompromising",
-    avatar: `../images/nimrodel.png`,
+    avatar: img,
   },
   coreStats: [
     { attname: "Strength", score: 8 },

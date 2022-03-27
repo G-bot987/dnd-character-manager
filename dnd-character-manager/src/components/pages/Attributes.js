@@ -2,7 +2,6 @@ import React from "react";
 import Attbox from "./Attbox";
 import Charinfo from "./Charinfo";
 import "./Attributes.css";
-import img from "../../images/nimrodel.png";
 
 export default function Attributes({ character }) {
   console.log(character.profile.avatar);
@@ -12,7 +11,7 @@ export default function Attributes({ character }) {
       <p>this is attributes</p>
       <div
         className="avatar-img"
-        style={{ backgroundImage: `url(${img})` }}
+        style={{ backgroundImage: `url(${character.profile.avatar})` }}
       ></div>
 
       <Charinfo character={character} />
