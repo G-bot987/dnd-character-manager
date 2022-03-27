@@ -8,6 +8,7 @@ const character = {
     background: "scion of a fallen house",
     strength: "loyalty",
     weakness: "unconcompromising",
+    avatar: `../images/nimrodel.png`,
   },
   coreStats: [
     { attname: "Strength", score: 8 },
