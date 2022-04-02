@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/dnd-character-manager/static/css/main.80591f14.css",
-    "main.js": "/dnd-character-manager/static/js/main.fc71f006.js",
+    "main.css": "/dnd-character-manager/static/css/main.15c9cce0.css",
+    "main.js": "/dnd-character-manager/static/js/main.8e2d3bc6.js",
     "static/js/787.564fe9fa.chunk.js": "/dnd-character-manager/static/js/787.564fe9fa.chunk.js",
     "static/media/nimrodel.png": "/dnd-character-manager/static/media/nimrodel.dd9afc15caa6fe5d2227.png",
     "index.html": "/dnd-character-manager/index.html",
-    "main.80591f14.css.map": "/dnd-character-manager/static/css/main.80591f14.css.map",
-    "main.fc71f006.js.map": "/dnd-character-manager/static/js/main.fc71f006.js.map",
+    "main.15c9cce0.css.map": "/dnd-character-manager/static/css/main.15c9cce0.css.map",
+    "main.8e2d3bc6.js.map": "/dnd-character-manager/static/js/main.8e2d3bc6.js.map",
     "787.564fe9fa.chunk.js.map": "/dnd-character-manager/static/js/787.564fe9fa.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.80591f14.css",
-    "static/js/main.fc71f006.js"
+    "static/css/main.15c9cce0.css",
+    "static/js/main.8e2d3bc6.js"
   ]
 }
