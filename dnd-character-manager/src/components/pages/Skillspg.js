@@ -8,6 +8,8 @@ export default function Skillspg({ skillsTemplate }) {
         {skillsTemplate.skills.map(({ skillname }, index) => (
           <li className="skill-box" id={index} key={index}>
             {skillname}
+
+            <span className="dot"></span>
           </li>
         ))}
       </ul>

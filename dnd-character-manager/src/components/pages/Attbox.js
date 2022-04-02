@@ -11,6 +11,8 @@ export default function Attbox({ character }) {
         {character.coreStats.map(({ attname, score }, index) => (
           <li className="attribute-box" id={index} key={index}>
             {attname} {score}
+
+           
           </li>
         ))}
       </ul>
