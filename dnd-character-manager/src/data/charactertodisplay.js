@@ -1,4 +1,4 @@
-import img from '../images/nimrodel.png'
+import img from "../images/nimrodel.png";
 const character = {
   profile: {
     charName: "Nimrodel",
@@ -18,6 +18,16 @@ const character = {
     { attname: "Charisma", score: 8 },
     { attname: "Inteligence", score: 8 },
     { attname: "Wisdom", score: 8 },
+  ],
+  skillStats: [
+    { skill: "athletics", proficiency: 1 },
+    { skill: "intimatatoin", proficiency: 1 },
+    { skill: "investigation", proficiency: 1 },
+    { skill: "perception", proficiency: 1 },
+    { skill: "persuasion", proficiency: 1 },
+    { skill: "stealth", proficiency: 1 },
+    { skill: "survival", proficiency: 1 },
+    { skill: "traditions", proficiency: 1 },
   ],
 };
 
