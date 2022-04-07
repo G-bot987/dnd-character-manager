@@ -2,9 +2,9 @@ import React from "react";
 import "./Skillspg.css";
 export default function Skillspg({ skillsTemplate }) {
   console.log("skills " + JSON.stringify(skillsTemplate));
-  // sort skills by powering attribute
+  // sort skills alphabetically
   const sorted = skillsTemplate.skills.sort((a, b) =>
-    a.poweringatt.localeCompare(b.poweringatt)
+    a.skillname.localeCompare(b.skillname)
   );
   console.log("sorted " + JSON.stringify(sorted));
 
@@ -46,19 +46,7 @@ export default function Skillspg({ skillsTemplate }) {
     }
   });
   // after skills pushed to array based on powering att, they are then ordered alphabetically.
-  console.log("cha " + JSON.stringify(Charisma));
-  Charisma.sort((a, b) => a.skillname.localeCompare(b.skillname));
-  console.log("post sort" + JSON.stringify(Charisma));
 
-  Constitution.sort((a, b) => a.skillname.localeCompare(b.skillname));
-
-  Dexterity.sort((a, b) => a.skillname.localeCompare(b.skillname));
-
-  Inteligence.sort((a, b) => a.skillname.localeCompare(b.skillname));
-
-  Strength.sort((a, b) => a.skillname.localeCompare(b.skillname));
-
-  Wisdom.sort((a, b) => a.skillname.localeCompare(b.skillname));
   // sorted alphatetically ordered skills are then pushed to one array to be mapped over in component.
   const sortedSkills = Charisma.concat(
     Constitution,
