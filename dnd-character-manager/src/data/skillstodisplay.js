@@ -9,7 +9,7 @@ export const skillsTemplate = {
     { skillname: "forbidden history", poweringatt: "Inteligence" },
     { skillname: "history", poweringatt: "Inteligence" },
     { skillname: "insight", poweringatt: "Wisdom" },
-    { skillname: "intimatatoin", poweringatt: "Charisma" },
+    { skillname: "intimatation", poweringatt: "Charisma" },
     { skillname: "investigation", poweringatt: "Inteligence" },
     { skillname: "lore", poweringatt: "Inteligence" },
     { skillname: "medicine", poweringatt: "Wisdom" },
