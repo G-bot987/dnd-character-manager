@@ -7,7 +7,7 @@
 
 .card-body{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     border-style: solid;
     border-color: black;
@@ -16,6 +16,13 @@
     margin: 0.2rem;
     background-color: cornsilk;
     justify-content: flex-start;
+}
+
+@media( max-width:768px){
+    .card-body{
+        flex-direction: row;
+            
+    }
 }
 
 .avatar-img{
