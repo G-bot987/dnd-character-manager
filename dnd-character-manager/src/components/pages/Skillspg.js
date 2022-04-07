@@ -17,7 +17,7 @@ export default function Skillspg({ skillsTemplate }) {
   const Strength = [];
   const Wisdom = [];
   const error = [];
-
+  // push skills to array based on powering attribute
   sorted.forEach(function (skill) {
     console.log(skill);
     if (skill.poweringatt === "Charisma") {
@@ -45,11 +45,35 @@ export default function Skillspg({ skillsTemplate }) {
       return;
     }
   });
+  // after skills pushed to array based on powering att, they are then ordered alphabetically.
+  console.log("cha " + JSON.stringify(Charisma));
+  Charisma.sort((a, b) => a.skillname.localeCompare(b.skillname));
+  console.log("post sort" + JSON.stringify(Charisma));
+
+  Constitution.sort((a, b) => a.skillname.localeCompare(b.skillname));
+
+  Dexterity.sort((a, b) => a.skillname.localeCompare(b.skillname));
+
+  Inteligence.sort((a, b) => a.skillname.localeCompare(b.skillname));
+
+  Strength.sort((a, b) => a.skillname.localeCompare(b.skillname));
+
+  Wisdom.sort((a, b) => a.skillname.localeCompare(b.skillname));
+  // sorted alphatetically ordered skills are then pushed to one array to be mapped over in component.
+  const sortedSkills = Charisma.concat(
+    Constitution,
+    Dexterity,
+    Inteligence,
+    Strength,
+    Wisdom
+  );
+
+  console.log("sorted skills " + JSON.stringify(sortedSkills));
 
   return (
     <div className="skill-container">
       <ul>
-        {sorted.map(({ skillname, poweringatt }, index) => (
+        {sortedSkills.map(({ skillname, poweringatt }, index) => (
           <li className="skill-box" id={index} key={index}>
             <p>{skillname}</p>
             <span className="dot"></span>
