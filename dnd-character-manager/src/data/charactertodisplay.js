@@ -20,14 +20,14 @@ const character = {
     { attname: "Wisdom", score: 8 },
   ],
   skillStats: [
-    { skill: "athletics", proficiency: 1 },
-    { skill: "intimatatoin", proficiency: 1 },
-    { skill: "investigation", proficiency: 1 },
-    { skill: "perception", proficiency: 1 },
-    { skill: "persuasion", proficiency: 1 },
-    { skill: "stealth", proficiency: 1 },
-    { skill: "survival", proficiency: 1 },
-    { skill: "traditions", proficiency: 1 },
+    { skill: "athletics", proficiency: true },
+    { skill: "intimatatoin", proficiency: true },
+    { skill: "investigation", proficiency: true },
+    { skill: "perception", proficiency: true },
+    { skill: "persuasion", proficiency: true },
+    { skill: "stealth", proficiency: true },
+    { skill: "survival", proficiency: true },
+    { skill: "traditions", proficiency: true },
   ],
 };
 
