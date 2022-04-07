@@ -7,7 +7,23 @@
     margin: 3rem;
     background-color: cornsilk;
     justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
 }
+
+.list-container{
+    display: inline-flex;
+}
+
+@media( max-width:768px){
+    .list-container{
+        display: block;
+            
+    }
+}
+
+
 
 
 .attribute-box{
