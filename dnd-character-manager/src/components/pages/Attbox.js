@@ -11,11 +11,15 @@ export default function Attbox({ character, template }) {
     <div className="attribute-container">
       <ul className="list-container">
         {template.map(({ attribute, skills }, index) => (
-          <li className="attribute-box" id={index} key={attribute}>
-            {attribute}
-            {console.log("inside attbox attribute.skills " + JSON.stringify(skills))}
+          <div className="attribute-skill-container">
+            <li className="attribute-box" id={index} key={attribute}>
+              {attribute}
+              {console.log(
+                "inside attbox attribute.skills " + JSON.stringify(skills)
+              )}
+            </li>
             <Skills skills={skills} />
-          </li>
+          </div>
         ))}
       </ul>
     </div>
