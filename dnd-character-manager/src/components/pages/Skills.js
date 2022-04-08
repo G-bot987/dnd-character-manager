@@ -8,8 +8,9 @@ export default function Skills({ skills }) {
   console.log("sorted " + JSON.stringify(sorted));
 
   return (
-    <div className="skill-container">
-      <ul>
+    
+      <ul className="skill-list">
+        <p>Skills</p>
         {sorted.map(({ skillname, poweringatt }, index) => (
           <li className="skill-box" id={index} key={index}>
             <p>{skillname}</p>
@@ -17,6 +18,6 @@ export default function Skills({ skills }) {
           </li>
         ))}
       </ul>
-    </div>
+    
   );
 }
