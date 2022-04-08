@@ -2,8 +2,8 @@ import React from "react";
 import Attbox from "./Attbox";
 import Charinfo from "./Charinfo";
 import "./Attributes.css";
-import skillsTemplate from "../../data/skillstodisplay";
-import Skillspg from "./Skillspg";
+import template from "../../data/templatecard";
+import Skills from "./Skills";
 export default function Attributes({ character }) {
   console.log(character.profile.avatar);
 
@@ -18,8 +18,8 @@ export default function Attributes({ character }) {
       <Charinfo character={character} />
       <div className="card-body">
 
-      <Attbox character={character} />
-      <Skillspg skillsTemplate={skillsTemplate} />
+      <Attbox character={character} template={template} />
+      {/* <Skillspg template={template} /> */}
       </div>
     </div>
   );
