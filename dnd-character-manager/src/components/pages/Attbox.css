@@ -8,11 +8,23 @@
     background-color: cornsilk;
     justify-content: start;
     flex-direction: row;
-    flex-wrap: nowrap;
     width: min-content;
-    
-    
 }
+
+
+.attribute-arrow{
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.attribute-arrow:hover {
+    border-bottom-width: 4px;
+    border-right-width: 4px;
+  }
 
 .list-container{
     display: inline-flex;
