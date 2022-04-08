@@ -12,7 +12,9 @@ export default function Skills({ skills }) {
   return (
     sorted.length > 0 && (
       <div>
-        <div className="skill-arrow" onClick={() => setShow(!show)}></div>
+        <div className="cirlce">
+          <div className="skill-arrow" onClick={() => setShow(!show)}></div>
+        </div>
         {show ? (
           <ul className="skill-list">
             <p>skills</p>
