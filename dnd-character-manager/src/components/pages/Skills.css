@@ -1,0 +1,45 @@
+.skill-container{
+    display: flex;
+    border-style: solid;
+    border-color: black;
+    border-radius: 2rem;
+    border-width: 0.2rem;
+    margin: 3rem;
+    background-color: cornsilk;
+    justify-content: center;
+    width: min-content;
+}
+
+.skill-list{
+padding-left: 0.1rem;
+}
+
+
+
+.skill-box{
+display: flex;
+border-style: solid;
+border-color: black;
+border-radius: 2rem;
+border-width: 0.2rem;
+margin-right: 0.2rem;
+margin-bottom: 0.2rem;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 0.1rem;
+}
+
+.dot {
+    height: 0.5rem;
+    width: 0.5rem;
+    background-color: cornsilk;
+    border-radius: 50%;
+    border-color: black;
+    border-width: 0.2rem;
+    border-style: solid;
+    display: flex;
+    margin: 1rem;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
