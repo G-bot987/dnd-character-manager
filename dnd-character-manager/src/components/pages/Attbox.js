@@ -1,26 +1,15 @@
-import React from "react";
 import { useState } from "react";
 import "./Attbox.css";
 import Skills from "./Skills";
 
 export default function Attbox({ character, template }) {
-  console.log("this is character " + character);
-  console.log("this is template attbox " + template);
-
   const [show, setShow] = useState(false);
 
   console.log("new stats ");
   return (
     <div className="attribute-container">
       <div className="cirlce">
-        <div
-          className="attribute-arrow"
-          onClick={() => setShow(!show)}
-          // style={{
-          //   transistion: "all 0.5s ease",
-          //   transform: 'rotate(${show ? 0 : "135deg"})',
-          // }}
-        ></div>
+        <div className="attribute-arrow" onClick={() => setShow(!show)}></div>
       </div>
       {show ? (
         <ul className="list-container">
@@ -40,9 +29,3 @@ export default function Attbox({ character, template }) {
     </div>
   );
 }
-
-// {character.coreStats.map(({ attname, score }, index) => (
-//   <li className="attribute-box" id={index} key={index}>
-//     {attname} {score}
-
-//   </li>
