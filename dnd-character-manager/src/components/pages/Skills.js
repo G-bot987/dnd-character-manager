@@ -4,11 +4,19 @@ import "./Skills.css";
 
 export default function Skills({ skills }) {
   const [show, setShow] = useState(false);
+
   return (
     skills.length > 0 && (
       <div>
         <div className="cirlce">
-          <div className="skill-arrow" onClick={() => setShow(!show)}></div>
+          <div
+            className="skill-arrow"
+            onClick={() => setShow(!show)}
+            style={{
+              transform: show ? "rotate(225deg)" : "",
+              transition: "transform 150ms ease",
+            }}
+          ></div>
         </div>
         {show ? (
           <ul className="skill-list">

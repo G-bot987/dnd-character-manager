@@ -9,7 +9,14 @@ export default function Attbox({ character, template }) {
   return (
     <div className="attribute-container">
       <div className="cirlce">
-        <div className="attribute-arrow" onClick={() => setShow(!show)}></div>
+        <div
+          className="attribute-arrow"
+          onClick={() => setShow(!show)}
+          style={{
+            transform: show ? "rotate(130deg)" : "",
+            transition: "transform 150ms ease",
+          }}
+        ></div>
       </div>
       {show ? (
         <ul className="list-container">
