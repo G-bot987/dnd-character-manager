@@ -1,9 +1,32 @@
 import React from "react";
 import { useState } from "react";
 import "./Skills.css";
+const { stringify } = require("flatted");
 
 export default function Skills({ skills }) {
   const [show, setShow] = useState(false);
+  const selectedSkill = {
+    deception: false,
+    intimation: false,
+    performance: false,
+    persuasion: false,
+  };
+  const [skillsSelected, setSkillsSelected] = useState(false);
+  const updateSelectedSkills = (skillname) => {
+    console.log("this is id" + JSON.stringify(skillname));
+
+    // const selection = { ...skillsSelected };
+    // selection[skillname] = !selection[skillname];
+    // setSkillsSelected({ ...selection });
+  };
+
+  // function displaySkills(click) {
+  //   click.preventDefault();
+  //   click.stopPropagation();
+  //   click.nativeEvent.stopImmediatePropagation();
+  //   console.log("was clicked");
+  //   setShow(!show);
+  // }
 
   return (
     skills.length > 0 && (
@@ -24,7 +47,15 @@ export default function Skills({ skills }) {
             {skills.map(({ skillname, poweringatt }, index) => (
               <li className="skill-box" id={index} key={index}>
                 <p>{skillname}</p>
-                <span className="dot"></span>
+                <div
+                  onClick={() => setSkillsSelected(!skillsSelected)}
+                  id={skillname}
+                  className="dot"
+                  style={{
+                    backgroundColor: skillsSelected ? "red" : "",
+                    transition: "transform 150ms ease",
+                  }}
+                ></div>
               </li>
             ))}
           </ul>
