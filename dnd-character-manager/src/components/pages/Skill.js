@@ -5,14 +5,15 @@ import "./Skills.css";
 
 export default function Skill({ skillname }) {
   const [skillsSelected, setSkillsSelected] = useState(() => {
-    const saved = localStorage.getItem("skillSelected");
+    const saved = localStorage.getItem(skillname);
     const initialValue = JSON.parse(saved);
-    return initialValue || "";
+    console.log("initial value " + initialValue);
+    return initialValue || false;
   });
 
   useEffect(() => {
     // storing selected skill
-    localStorage.setItem("skillSelected", JSON.stringify(skillsSelected));
+    localStorage.setItem(skillname, JSON.stringify(skillsSelected));
   }, [skillsSelected]);
 
   return (
