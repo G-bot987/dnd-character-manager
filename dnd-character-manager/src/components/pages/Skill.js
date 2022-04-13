@@ -1,9 +1,19 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocalStorage } from "../../useLocalStorage";
 import "./Skills.css";
 
 export default function Skill({ skillname }) {
-  const [skillsSelected, setSkillsSelected] = useState(false);
+  const [skillsSelected, setSkillsSelected] = useState(() => {
+    const saved = localStorage.getItem("skillSelected");
+    const initialValue = JSON.parse(saved);
+    return initialValue || "";
+  });
+
+  useEffect(() => {
+    // storing selected skill
+    localStorage.setItem("skillSelected", JSON.stringify(skillsSelected));
+  }, [skillsSelected]);
 
   return (
     <>
