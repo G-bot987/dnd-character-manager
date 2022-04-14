@@ -4,10 +4,10 @@ export const template = {
       attribute: "Charisma",
       abr: "Cha",
       skills: [
-        { skillname: "deception", poweringatt: "Charisma" },
-        { skillname: "intimatation", poweringatt: "Charisma" },
-        { skillname: "performance", poweringatt: "Charisma" },
-        { skillname: "persuasion", poweringatt: "Charisma" },
+        { name: "deception", poweringatt: "Charisma" },
+        { name: "intimatation", poweringatt: "Charisma" },
+        { name: "performance", poweringatt: "Charisma" },
+        { name: "persuasion", poweringatt: "Charisma" },
       ],
     },
 
@@ -21,9 +21,9 @@ export const template = {
       attribute: "Dexterity",
       abr: "Dex",
       skills: [
-        { skillname: "acrobatics", poweringatt: "Dexterity" },
-        { skillname: "sleight of hand", poweringatt: "Dexterity" },
-        { skillname: "stealth", poweringatt: "Dexterity" },
+        { name: "acrobatics", poweringatt: "Dexterity" },
+        { name: "sleight of hand", poweringatt: "Dexterity" },
+        { name: "stealth", poweringatt: "Dexterity" },
       ],
     },
 
@@ -31,69 +31,74 @@ export const template = {
       attribute: "Inteligence",
       abr: "Int",
       skills: [
-        { skillname: "arcana", poweringatt: "Inteligence" },
-        { skillname: "dark arcana", poweringatt: "Inteligence" },
-        { skillname: "forbidden history", poweringatt: "Inteligence" },
-        { skillname: "history", poweringatt: "Inteligence" },
-        { skillname: "investigation", poweringatt: "Inteligence" },
-        { skillname: "lore", poweringatt: "Inteligence" },
-        { skillname: "nature", poweringatt: "Inteligence" },
-        { skillname: "religion", poweringatt: "Inteligence" },
-        { skillname: "traditions", poweringatt: "Inteligence" },
+        { name: "arcana", poweringatt: "Inteligence" },
+        { name: "dark arcana", poweringatt: "Inteligence" },
+        { name: "forbidden history", poweringatt: "Inteligence" },
+        { name: "history", poweringatt: "Inteligence" },
+        { name: "investigation", poweringatt: "Inteligence" },
+        { name: "lore", poweringatt: "Inteligence" },
+        { name: "nature", poweringatt: "Inteligence" },
+        { name: "religion", poweringatt: "Inteligence" },
+        { name: "traditions", poweringatt: "Inteligence" },
       ],
     },
 
     {
       attribute: "Strength",
       abr: "Str",
-      skills: [{ skillname: "athletics", poweringatt: "Strength" }],
+      skills: [{ name: "athletics", poweringatt: "Strength" }],
     },
 
     {
       attribute: "Wisdom",
       abr: "Wis",
       skills: [
-        { skillname: "animal handling", poweringatt: "Wisdom" },
-        { skillname: "insight", poweringatt: "Wisdom" },
-        { skillname: "medicine", poweringatt: "Wisdom" },
-        { skillname: "perception", poweringatt: "Wisdom" },
-        { skillname: "survival", poweringatt: "Wisdom" },
+        { name: "animal handling", poweringatt: "Wisdom" },
+        { name: "insight", poweringatt: "Wisdom" },
+        { name: "medicine", poweringatt: "Wisdom" },
+        { name: "perception", poweringatt: "Wisdom" },
+        { name: "survival", poweringatt: "Wisdom" },
       ],
     },
   ],
-  languages: [
-    {
-      imperialtongues: [
-        {
-          language: "high imperial",
-          written: Boolean,
-          spoken: Boolean,
-          inflection: "",
-          proficiency: Number,
-        },
-        {
-          language: "imperial dialect",
-          written: Boolean,
-          spoken: Boolean,
-          inflection: "",
-          proficiency: Number,
-        },
-        {
-          language: "Karsgerdi",
-          written: Boolean,
-          spoken: Boolean,
-          inflection: "",
-          proficiency: Number,
-        },
-      ],
-    },
-  ],
+  languages: {
+    imperialtongues: [
+      {
+        language: "high imperial",
+        written: null,
+        spoken: null,
+        inflection: "",
+        proficiency: null,
+      },
+      {
+        language: "imperial dialect",
+        written: null,
+        spoken: null,
+        inflection: "",
+        proficiency: null,
+      },
+      {
+        language: "Karsgerdi",
+        written: null,
+        spoken: null,
+        inflection: "",
+        proficiency: null,
+      },
+    ],
+  },
 };
 
-// console.log("template " + JSON.stringify(preTemplate));
-// const template = preTemplate.map((attr) =>
-//   attr.skills.sort((a, b) => a.skillname.localeCompare(b.skillname))
-// );
-// console.log("this is template " + template);
+// cloned template with spread, spread is a powerful operator.
+const templateSorted = { ...template };
 
-export default template;
+// as template is cloned as templateSorted, we can  discard temp..sorteds array of attributes with the sorted version of attributes
+templateSorted.attributes = template.attributes.map((attr) => {
+  // Returning sorted skills
+  return {
+    ...attr,
+    skills: attr.skills.sort((a, b) => a.name.localeCompare(b.name)),
+  };
+});
+// to sanitise date json.stringify(x, null,2)
+
+export default templateSorted;
