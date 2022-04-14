@@ -8,6 +8,8 @@ import Notes from "./components/pages/Notes";
 // attribute import
 import character from "./data/charactertodisplay";
 
+// react dom
+import ReactDOM from "react-dom";
 function App() {
   // use state hook to render different pg's
 

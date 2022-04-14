@@ -24,9 +24,6 @@ export default function Attbox({ character, template }) {
             <div className="attribute-skill-container" key={attribute}>
               <li className="attribute-box" id={index}>
                 {attribute}
-                {console.log(
-                  "inside attbox attribute.skills " + JSON.stringify(skills)
-                )}
               </li>
               <Skills skills={skills} />
             </div>

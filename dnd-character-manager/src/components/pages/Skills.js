@@ -22,9 +22,9 @@ export default function Skills({ skills }) {
         {show ? (
           <ul className="skill-list">
             <p>skills</p>
-            {skills.map(({ skillname, poweringatt }, index) => (
+            {skills.map(({ name, poweringatt }, index) => (
               <li className="skill-box" id={index} key={index}>
-                <Skill skillname={skillname} />
+                <Skill name={name} />
               </li>
             ))}
           </ul>
