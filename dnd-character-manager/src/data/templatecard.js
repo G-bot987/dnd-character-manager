@@ -1,6 +1,8 @@
-export const template = [
-  {
-    attribute: "Charisma",
+export const template = {
+ attributes: [
+
+    {
+      attribute: "Charisma",
     abr: "Cha",
     skills: [
       { skillname: "deception", poweringatt: "Charisma" },
@@ -9,13 +11,13 @@ export const template = [
       { skillname: "persuasion", poweringatt: "Charisma" },
     ],
   },
-
+  
   {
     attribute: "Constitution",
     abr: "Con",
     skills: [],
   },
-
+  
   {
     attribute: "Dexterity",
     abr: "Dex",
@@ -41,13 +43,13 @@ export const template = [
       { skillname: "traditions", poweringatt: "Inteligence" },
     ],
   },
-
+  
   {
     attribute: "Strength",
     abr: "Str",
     skills: [{ skillname: "athletics", poweringatt: "Strength" }],
   },
-
+  
   {
     attribute: "Wisdom",
     abr: "Wis",
@@ -59,6 +61,13 @@ export const template = [
       { skillname: "survival", poweringatt: "Wisdom" },
     ],
   },
-];
+],
+};
+
+// console.log("template " + JSON.stringify(preTemplate));
+// const template = preTemplate.map((attr) =>
+//   attr.skills.sort((a, b) => a.skillname.localeCompare(b.skillname))
+// );
+// console.log("this is template " + template);
 
 export default template;
