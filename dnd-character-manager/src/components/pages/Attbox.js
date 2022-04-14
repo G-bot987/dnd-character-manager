@@ -4,8 +4,8 @@ import Skills from "./Skills";
 
 export default function Attbox({ character, template }) {
   const [show, setShow] = useState(false);
+  const attributes = template.attributes;
 
-  console.log("new stats ");
   return (
     <div className="attribute-container">
       <div className="cirlce">
@@ -20,7 +20,7 @@ export default function Attbox({ character, template }) {
       </div>
       {show ? (
         <ul className="list-container">
-          {template.map(({ attribute, skills }, index) => (
+          {attributes.map(({ attribute, skills }, index) => (
             <div className="attribute-skill-container" key={attribute}>
               <li className="attribute-box" id={index}>
                 {attribute}
