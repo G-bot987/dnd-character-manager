@@ -2,27 +2,24 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./Skills.css";
 
-export default function Skill({ skillname }) {
+export default function Skill({ name }) {
   const [skillsSelected, setSkillsSelected] = useState(() => {
-    const saved = localStorage.getItem(skillname);
+    const saved = localStorage.getItem(name);
     const initialValue = JSON.parse(saved);
-    console.log("initial value " + initialValue);
     return initialValue || false;
   });
 
   useEffect(() => {
     // storing selected skill
-    localStorage.setItem(skillname, JSON.stringify(skillsSelected));
+    localStorage.setItem(name, JSON.stringify(skillsSelected));
   }, [skillsSelected]);
 
   return (
     <>
-      <p>{skillname}</p>
+      <p>{name}</p>
       <div
-        onClick={() =>
-          setSkillsSelected(!skillsSelected, console.log("here " + skillname))
-        }
-        id={skillname}
+        onClick={() => setSkillsSelected(!skillsSelected)}
+        id={name}
         className="dot"
         style={{
           backgroundColor: skillsSelected ? "red" : "",
