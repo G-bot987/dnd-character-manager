@@ -5,10 +5,10 @@ export default function Attributes({ languages }) {
   const [show, setShow] = useState(false);
   return (
     <div className="language-container">
+      {!show ? <p className="lang-title">Languages</p> : null}
       <div className="cirlce">
-        <p className="lang-title">Languages</p>
         <div
-          className="attribute-arrow"
+          className="language-arrow"
           onClick={() => setShow(!show)}
           style={{
             transform: show ? "rotate(130deg)" : "",
