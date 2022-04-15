@@ -8,6 +8,7 @@ export default function Attbox({ character, template }) {
 
   return (
     <div className="attribute-container">
+      {!show ? <p className="attribute-title"> Attributes</p> : null}
       <div className="cirlce">
         <div
           className="attribute-arrow"
