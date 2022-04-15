@@ -3,13 +3,14 @@ import Attbox from "./Attbox";
 import Charinfo from "./Charinfo";
 import "./Attributes.css";
 import template from "../../data/templatecard";
-import Skills from "./Skills";
+import Langbox from "./Langbox";
+
 export default function Attributes({ character }) {
-  console.log(character.profile.avatar);
+  const languages = template.languages;
+  console.log("template " + JSON.stringify(languages, null, 2));
 
   return (
     <div className="card-container">
-      <p>this is attributes</p>
       <div
         className="avatar-img"
         style={{ backgroundImage: `url(${character.profile.avatar})` }}
@@ -18,6 +19,7 @@ export default function Attributes({ character }) {
       <Charinfo character={character} />
       <div className="card-body">
         <Attbox character={character} template={template} />
+        <Langbox languages={languages} />
       </div>
     </div>
   );
