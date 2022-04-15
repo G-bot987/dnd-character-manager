@@ -2,30 +2,28 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./Skills.css";
 
-export default function Language({ languagegroup }) {
+export default function Language({ language }) {
   const [skillsSelected, setSkillsSelected] = useState(() => {
-    const saved = localStorage.getItem(languagegroup);
+    const saved = localStorage.getItem(language);
     const initialValue = JSON.parse(saved);
     return initialValue || false;
   });
-  console.log("I am language" + languagegroup);
+
   useEffect(() => {
-    // storing selected skill
-    localStorage.setItem(languagegroup, JSON.stringify(skillsSelected));
+    // storing selected language
+    localStorage.setItem(language, JSON.stringify(skillsSelected));
   }, [skillsSelected]);
+
+  const mylanguage = [];
+  mylanguage.push(language);
 
   return (
     <>
-      <p>{languagegroup}</p>
-      <div
-        onClick={() => setSkillsSelected(!skillsSelected)}
-        id={languagegroup}
-        className="dot"
-        style={{
-          backgroundColor: skillsSelected ? "red" : "",
-          transition: "transform 150ms ease",
-        }}
-      ></div>
+      {mylanguage.map(({ language }, index) => (
+        <li className="skill-box" id={index} key={index}>
+          {language}
+        </li>
+      ))}
     </>
   );
 }
