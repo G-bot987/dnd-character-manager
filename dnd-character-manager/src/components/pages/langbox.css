@@ -1,0 +1,16 @@
+.language-container{
+    display: flex;
+    border-style: solid;
+    border-color: black;
+    border-radius: 2rem;
+    border-width: 0.2rem;
+    margin: 3rem;
+    background-color: cornsilk;
+    justify-content: start;
+    flex-direction: row;
+    width: min-content;
+}
+
+.lang-title{
+    margin: 0;
+}
