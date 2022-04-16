@@ -1,11 +1,12 @@
-import React from 'react'
-import Language from './Language'
+import React from "react";
+import { useState, useEffect } from "react";
+import "./Skills.css";
 
-const Languagedetail = (Language) => {
-    console.log('language detail ', Language)
+export default function Languagedetail({ language, inflection }) {
+  console.log(inflection);
   return (
-    <div>Languagedetail</div>
-  )
+    <div>
+      {language} {inflection}
+    </div>
+  );
 }
-
-export default Languagedetail
