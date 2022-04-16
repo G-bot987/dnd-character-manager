@@ -9,6 +9,7 @@
     justify-content: start;
     flex-direction: row;
     width: min-content;
+    height: min-content;
 }
 .attribute-title{
     vertical-align: middle;
@@ -51,6 +52,14 @@
             
     }
 }
+@media( max-width:375px){
+    .attribute-container{
+        margin:auto; 
+        margin-top: 2rem;
+            
+    }
+}
+
 
 
 
