@@ -8,7 +8,7 @@ export default function Attributes({ languages }) {
   return (
     <div>
       <div className="cirlce-dropdown">
-        <p className="skill-name">Languages</p>
+        <p className="skill-name">Dialects</p>
         <div
           className="skill-arrow"
           onClick={() => setShow(!show)}
