@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./langbox.css";
-import Language from "./Language";
+import Languages from "./Languages";
 
 export default function Attributes({ languages }) {
   const [show, setShow] = useState(false);
@@ -22,12 +22,9 @@ export default function Attributes({ languages }) {
         <ul className="list-container">
           {Object.keys(languages).map((dialect, index) => (
             <li key={`${index}-dialect`}>
-              <p>{dialect}</p>
-              <div>
-                {languages[dialect].map((language, index) => (
-                  <Language language={language} />
-                ))}
-              </div>
+              <p> {dialect}</p>
+
+              <Languages languages={languages[dialect]} />
             </li>
           ))}
         </ul>
