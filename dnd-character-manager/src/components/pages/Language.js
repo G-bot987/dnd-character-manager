@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "./Skills.css";
+import Languagedetail from "./Languagedetail";
 
 export default function Language({ language }) {
   const [skillsSelected, setSkillsSelected] = useState(() => {
@@ -22,6 +23,7 @@ export default function Language({ language }) {
       {mylanguage.map(({ language }, index) => (
         <li className="skill-box" id={index} key={index}>
           {language}
+          <Languagedetail language={language} />
         </li>
       ))}
     </>
