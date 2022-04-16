@@ -21,7 +21,7 @@ export default function Attributes({ languages }) {
       {show ? (
         <div>
           {languages.map((language, index) => (
-            <Language language={language} />
+            <Language key={`${index}-language`} language={language} />
           ))}
         </div>
       ) : null}

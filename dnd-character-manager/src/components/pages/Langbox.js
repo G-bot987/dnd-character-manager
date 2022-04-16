@@ -19,15 +19,15 @@ export default function Attributes({ languages }) {
         ></div>
       </div>
       {show ? (
-        <ul className="list-container">
+        <div className="list-container">
           {Object.keys(languages).map((dialect, index) => (
-            <li key={`${index}-dialect`}>
-              <p> {dialect}</p>
+            <div key={`${index}-dialect`}>
+              <p> {dialect} </p>
 
               <Languages languages={languages[dialect]} />
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       ) : null}
     </div>
   );
