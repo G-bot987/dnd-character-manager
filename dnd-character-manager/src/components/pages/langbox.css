@@ -9,6 +9,16 @@
     justify-content: start;
     flex-direction: row;
     width: min-content;
+    height: min-content;
+}
+
+@media( max-width:375px){
+    .language-container{
+        margin:auto; 
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+            
+    }
 }
 
 .lang-title{
