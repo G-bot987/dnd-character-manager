@@ -9,7 +9,8 @@ export default function Skills({ skills }) {
   return (
     skills.length > 0 && (
       <div>
-        <div className="cirlce">
+        <div className="cirlce-dropdown">
+          <p className="skill-name">skills</p>
           <div
             className="skill-arrow"
             onClick={() => setShow(!show)}
@@ -21,7 +22,6 @@ export default function Skills({ skills }) {
         </div>
         {show ? (
           <ul className="skill-list">
-            <p>skills</p>
             {skills.map(({ name, poweringatt }, index) => (
               <li className="skill-box" id={index} key={index}>
                 <Skill name={name} />

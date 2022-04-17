@@ -7,7 +7,6 @@ import Langbox from "./Langbox";
 
 export default function Attributes({ character }) {
   const languages = template.languages;
-  console.log("template " + JSON.stringify(languages, null, 2));
 
   return (
     <div className="card-container">

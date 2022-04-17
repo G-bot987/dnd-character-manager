@@ -98,13 +98,6 @@ export const template = {
         proficiency: null,
       },
       {
-        language: "Liundia",
-        written: null,
-        spoken: null,
-        inflection: "",
-        proficiency: null,
-      },
-      {
         language: "Ru",
         written: null,
         spoken: null,
@@ -190,7 +183,7 @@ export const template = {
       },
 
       {
-        language: "Liundia",
+        language: "Liundian",
         written: null,
         spoken: null,
         inflection: "",
