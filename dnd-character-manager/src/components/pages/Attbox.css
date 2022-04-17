@@ -44,6 +44,7 @@
 
 .list-container{
     display: inline-flex;
+    padding-left: 0;
 }
 
 @media( max-width:768px){
