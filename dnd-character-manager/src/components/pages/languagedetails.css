@@ -1,0 +1,17 @@
+.language-detail-box{
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    width:102%;
+    border-top: 0.2rem solid black;
+}
+
+.language-details-list{
+    list-style-type: none;
+    padding: 0.0rem;
+}
+
+.row-language-details{
+    width: 50%;
+    justify-content: center;
+}
