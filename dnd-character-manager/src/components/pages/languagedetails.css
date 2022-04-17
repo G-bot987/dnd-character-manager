@@ -24,6 +24,7 @@
 .dialect-dropdown{
     border-top: 0.2rem solid black;
     display: flex;
+    flex-direction: column;
     
 }
 
@@ -45,4 +46,10 @@
 
   .click-container-dialects{
       display: flex;
+      height: min-content;
+  }
+  
+  .dialects-list{
+    list-style-type: none;
+    padding: 0;
   }
