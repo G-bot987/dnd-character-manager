@@ -3,5 +3,9 @@ import { useState, useEffect } from "react";
 import "./dialects.css";
 
 export default function Dialects({ version, index }) {
-  return <li key={index}>{version.name}</li>;
+  return (
+    <li className="dialect-box" key={index}>
+      {version.name} proficiency{version.proficiency}
+    </li>
+  );
 }
