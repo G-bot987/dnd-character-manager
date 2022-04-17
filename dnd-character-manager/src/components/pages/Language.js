@@ -29,7 +29,10 @@ export default function Language({ language }) {
             <ul className="language-title">
               <li>
                 <div onClick={() => setShow(!show)} id={index} key={index} className="click-container">
-                  <div className="arrow-container">
+                  <div className="arrow-container"
+                    style={{
+                      marginTop: show ? "0.3rem " : "",
+                    }}>
                     <div
                       className="language-detail-arrow-down"
                       style={{
@@ -39,7 +42,10 @@ export default function Language({ language }) {
                     ></div>
                   </div>
                   {language}
-                  <div className="arrow-container">
+                  <div className="arrow-container"
+                    style={{
+                      marginTop: show ? "0.3rem " : "",
+                    }}>
                     <div
                       className="language-detail-arrow-down"
                       style={{
