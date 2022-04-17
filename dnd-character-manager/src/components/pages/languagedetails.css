@@ -42,3 +42,7 @@
     
     margin-right: 1rem;
   }
+
+  .click-container-dialects{
+      display: flex;
+  }
