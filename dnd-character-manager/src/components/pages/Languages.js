@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./language.css";
+import "./languages.css";
 import Language from "./Language";
 
 export default function Attributes({ languages }) {

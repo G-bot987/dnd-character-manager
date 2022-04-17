@@ -21,39 +21,23 @@
         padding: 0;
         list-style-type: none;
     }
-
-    .cirlce-dropdown-language{
-        height: min-content;
-        background-color: cornsilk;
-        border: solid black;
-        border-radius: 50%;
-        margin: auto;
-       
-        justify-content: center;
-        align-items: center;
-        border-style: solid;
-          border-color: black;
-          border-radius: 2rem;
-          border-width: 0.2rem;
-          width: min-content;
-          
-      }
-
-      .dialect-name{
-        margin: 0.2em 0.2em 0 0.2em;
-      }
       
-      .language-arrow-down{
+      .language-detail-arrow-down{
         border: solid black;
         border-width: 0 3px 3px 0;
         display: inline-block;
         padding: 5px;
-        margin: 0 0 0 1.5em;
+        margin: 0 0 0 0;
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
       }
       
-      .language-arrow-down:hover {
+      .language-detail-arrow-down:hover {
         border-bottom-width: 4px;
         border-right-width: 4px;
+      }
+      .arrow-container{
+        display: inline;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
       }
