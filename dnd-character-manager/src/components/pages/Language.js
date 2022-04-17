@@ -27,8 +27,28 @@ export default function Language({ language }) {
         ) => (
           <div className="language-box" key={index}>
             <ul className="language-title">
-              <li onClick={() => setShow(!show)} id={index} key={index}>
-                {language}
+              <li>
+                <div onClick={() => setShow(!show)} id={index} key={index} className="click-container">
+                  <div className="arrow-container">
+                    <div
+                      className="language-detail-arrow-down"
+                      style={{
+                        transform: show ? "rotate(225deg)" : "",
+                        transition: "transform 150ms ease",
+                      }}
+                    ></div>
+                  </div>
+                  {language}
+                  <div className="arrow-container">
+                    <div
+                      className="language-detail-arrow-down"
+                      style={{
+                        transform: show ? "rotate(225deg)" : "",
+                        transition: "transform 150ms ease",
+                      }}
+                    ></div>
+                  </div>
+                </div>
                 {show ? (
                   <Languagedetail
                     language={language}
