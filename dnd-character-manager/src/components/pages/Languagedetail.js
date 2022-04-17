@@ -75,7 +75,7 @@ export default function Languagedetail({
           {show ? (
             <div>
               {dialect.map((version, index) => (
-                <ul key={index}>
+                <ul className="dialects-list" key={index}>
                   <Dialects version={version} index={index} />
                 </ul>
               ))}
