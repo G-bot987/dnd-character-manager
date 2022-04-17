@@ -20,18 +20,30 @@ export default function Language({ language }) {
 
   return (
     <>
-      {mylanguage.map(({ language, inflection }, index) => (
-        <div className="language-box">
-          <ul className="language-title">
-            <li onClick={() => setShow(!show)} id={index} key={index}>
-              {language}
-            </li>
-          </ul>
-          {show ? (
-            <Languagedetail language={language} inflection={inflection} />
-          ) : null}
-        </div>
-      ))}
+      {mylanguage.map(
+        (
+          { language, inflection, spoken, written, proficiency, dialect },
+          index
+        ) => (
+          <div className="language-box" key={index}>
+            <ul className="language-title">
+              <li onClick={() => setShow(!show)} id={index} key={index}>
+                {language}
+                {show ? (
+                  <Languagedetail
+                    language={language}
+                    inflection={inflection}
+                    spoken={spoken}
+                    written={written}
+                    proficiency={proficiency}
+                    dialect={dialect}
+                  />
+                ) : null}
+              </li>
+            </ul>
+          </div>
+        )
+      )}
     </>
   );
 }
