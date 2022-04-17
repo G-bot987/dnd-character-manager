@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import "./Skills.css";
 import Languagedetail from "./Languagedetail";
+import "./language.css";
 
 export default function Language({ language }) {
   // const [skillsSelected, setSkillsSelected] = useState(() => {
@@ -21,17 +21,16 @@ export default function Language({ language }) {
   return (
     <>
       {mylanguage.map(({ language, inflection }, index) => (
-        <li
-          className="skill-box"
-          onClick={() => setShow(!show)}
-          id={index}
-          key={index}
-        >
-          {language}
+        <div className="language-box">
+          <ul className="language-title">
+            <li onClick={() => setShow(!show)} id={index} key={index}>
+              {language}
+            </li>
+          </ul>
           {show ? (
             <Languagedetail language={language} inflection={inflection} />
           ) : null}
-        </li>
+        </div>
       ))}
     </>
   );
