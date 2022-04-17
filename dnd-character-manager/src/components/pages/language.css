@@ -32,12 +32,12 @@
         -webkit-transform: rotate(45deg);
       }
       
-      .language-detail-arrow-down:hover {
-        border-bottom-width: 4px;
-        border-right-width: 4px;
-      }
       .arrow-container{
         display: inline;
         margin-left: 0.5rem;
         margin-right: 0.5rem;
       }
+.click-container{
+  display: flex;
+  justify-content: center;
+}
