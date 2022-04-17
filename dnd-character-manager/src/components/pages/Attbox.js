@@ -16,6 +16,7 @@ export default function Attbox({ character, template }) {
           style={{
             transform: show ? "rotate(130deg)" : "",
             transition: "transform 150ms ease",
+            margin: show ? "0.3rem 0 0 0.4rem" : "",
           }}
         ></div>
       </div>

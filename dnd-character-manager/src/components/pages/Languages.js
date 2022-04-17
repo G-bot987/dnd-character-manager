@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./langbox.css";
+import "./language.css";
 import Language from "./Language";
 
 export default function Attributes({ languages }) {
@@ -7,10 +7,10 @@ export default function Attributes({ languages }) {
 
   return (
     <div>
-      <div className="cirlce-dropdown">
-        <p className="skill-name">Dialects</p>
+      <div className="cirlce-dropdown-language">
+        <p className="dialect-name">Dialects</p>
         <div
-          className="skill-arrow"
+          className="language-arrow-down"
           onClick={() => setShow(!show)}
           style={{
             transform: show ? "rotate(225deg)" : "",

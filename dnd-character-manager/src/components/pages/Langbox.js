@@ -15,13 +15,14 @@ export default function Attributes({ languages }) {
           style={{
             transform: show ? "rotate(130deg)" : "",
             transition: "transform 150ms ease",
+            margin: show ? "0.3rem 0 0 0.4rem" : "",
           }}
         ></div>
       </div>
       {show ? (
         <ul className="list-container">
           {Object.keys(languages).map((dialect, index) => (
-            <div key={`${index}-dialect`}>
+            <div className="list" key={`${index}-dialect`}>
               <li className="attribute-box"> {dialect} </li>
 
               <Languages languages={languages[dialect]} />
