@@ -41,3 +41,14 @@
   display: flex;
   justify-content: center;
 }
+
+.add-language-click-container{
+  width: 100%;
+  border-top: 0.2rem solid black;
+ 
+}
+
+.add-language{
+  padding-left: 0.2em;
+  margin: 0;
+}

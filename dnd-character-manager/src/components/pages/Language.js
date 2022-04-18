@@ -66,6 +66,9 @@ export default function Language({ language }) {
             ) : null}
           </li>
         </ul>
+        <div className="add-language-click-container">
+          <p className="add-language">add to my languages</p>
+        </div>
       </div>
     </>
   );
