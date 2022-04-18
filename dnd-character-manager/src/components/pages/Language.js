@@ -4,17 +4,8 @@ import Languagedetail from "./Languagedetail";
 import "./language.css";
 
 export default function Language({ language }) {
-  // const [skillsSelected, setSkillsSelected] = useState(() => {
-  //   const saved = localStorage.getItem(language);
-  //   const initialValue = JSON.parse(saved);
-  //   return initialValue || false;
-  // });
 
-  // useEffect(() => {
-  //   // storing selected language
-  //   localStorage.setItem(language, JSON.stringify(skillsSelected));
-  // }, [skillsSelected]);
-  console.log(language);
+
   const [show, setShow] = useState(false);
 
   return (
@@ -66,9 +57,7 @@ export default function Language({ language }) {
             ) : null}
           </li>
         </ul>
-        <div className="add-language-click-container">
-          <p className="add-language">add to my languages</p>
-        </div>
+  
       </div>
     </>
   );

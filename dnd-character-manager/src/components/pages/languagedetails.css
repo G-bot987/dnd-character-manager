@@ -10,9 +10,56 @@
     list-style-type: none;
     padding: 0.0rem;
 }
+.language-details-list-2{
+    list-style-type: none;
+    padding: 0.0rem;
+    padding-left: 0.5rem;
+}
 
 .language-details-list-item{
     text-align: left;
+    display: inline-flex;
+}
+.language-detail-dot{
+    height: 0.5rem;
+    width: 0.5rem;
+    background-color: cornsilk;
+    border-radius: 50%;
+    border-color: black;
+    border-width: 0.2rem;
+    border-style: solid;
+    display: flex;
+    margin-left: 0.5rem;
+    margin-top: 0.3rem; 
+    max-height: min-content;
+}
+
+.language-detail-inflection-dot{
+    height: 0.5rem;
+    width: 0.5rem;
+    background-color: cornsilk;
+    border-radius: 50%;
+    border-color: black;
+    border-width: 0.2rem;
+    border-style: solid;
+    display: flex;
+    margin-left: 1.2rem;
+    margin-top: 0.3rem; 
+    max-height: min-content;
+}
+
+.language-detail-written-dot{
+    height: 0.5rem;
+    width: 0.5rem;
+    background-color: cornsilk;
+    border-radius: 50%;
+    border-color: black;
+    border-width: 0.2rem;
+    border-style: solid;
+    display: flex;
+    margin-left: 0.6rem;
+    margin-top: 0.3rem; 
+    max-height: min-content;
 }
 
 .row-language-details{
