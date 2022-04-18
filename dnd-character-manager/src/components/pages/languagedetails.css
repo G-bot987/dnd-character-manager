@@ -11,6 +11,10 @@
     padding: 0.0rem;
 }
 
+.language-details-list-item{
+    text-align: left;
+}
+
 .row-language-details{
     width: 50%;
     justify-content: center;
