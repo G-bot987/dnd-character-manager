@@ -11,7 +11,7 @@ export default function Spoken({ spoken }) {
       <div
         id={spoken}
         onClick={() => setpropertySelected(!propertySelected)}
-        className="language-detail-written-dot"
+        className="language-detail-dot"
         style={{
           backgroundColor: propertySelected ? "red" : "",
           transition: "transform 150ms ease",

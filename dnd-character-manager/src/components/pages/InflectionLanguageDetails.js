@@ -11,7 +11,7 @@ export default function Infection({ inflection }) {
       <div
         id={inflection}
         onClick={() => setpropertySelected(!propertySelected)}
-        className="language-detail-written-dot"
+        className="language-detail-inflection-dot"
         style={{
           backgroundColor: propertySelected ? "red" : "",
           transition: "transform 150ms ease",
