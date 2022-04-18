@@ -2,4 +2,22 @@
     border-top:0.2rem solid black ;
     text-align: left;
     padding-left: 0.8em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dialect-detail-dot{
+    height: 0.5rem;
+    width: 0.5rem;
+    background-color: cornsilk;
+    border-radius: 50%;
+    border-color: black;
+    border-width: 0.2rem;
+    border-style: solid;
+    display: flex;
+    margin-left: 0.5rem;
+    margin-top: 0.3rem; 
+    max-height: min-content;
+    
 }
