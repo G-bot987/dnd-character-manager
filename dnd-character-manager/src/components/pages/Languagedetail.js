@@ -2,7 +2,10 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./languagedetails.css";
 import Dialects from "./Dialects.js";
-
+import Written from "./WrittenLanguageDetails";
+import Spoken from "./SpokenLanguageDetails";
+import Proficiency from "./ProficiencyLanguageDetails";
+import Infection from "./InflectionLanguageDetails";
 export default function Languagedetail({
   inflection,
   spoken,
@@ -11,17 +14,12 @@ export default function Languagedetail({
   dialect,
   key,
 }) {
-  const [skillsSelected, setSkillsSelected] = useState(() => {
-    const saved = localStorage.getItem(proficiency);
-    const initialValue = JSON.parse(saved);
-    console.log("int", saved);
-    return initialValue || false;
+  const [propertySelected, setpropertySelected] = useState(() => {
+    // const saved = localStorage.getItem(proficiency);
+    // const initialValue = JSON.parse(saved);
+    // console.log("int", saved);
+    // return initialValue || false;
   });
-
-  useEffect(() => {
-    // storing selected language
-    localStorage.setItem(proficiency, JSON.stringify(skillsSelected));
-  }, [skillsSelected]);
 
   const [show, setShow] = useState(false);
   if (dialect === undefined) {
@@ -33,60 +31,14 @@ export default function Languagedetail({
       <div className="first-row">
         <div className="row-language-details">
           <ul className="language-details-list">
-            <li className="language-details-list-item">
-              proficiency
-              <div
-                id={proficiency}
-                onClick={() => setSkillsSelected(!skillsSelected)}
-                className="language-detail-dot"
-                style={{
-                  backgroundColor: skillsSelected ? "red" : "",
-                  transition: "transform 150ms ease",
-                }}
-              ></div>
-            </li>
-            <li className="language-details-list-item">
-              inflection {inflection}
-              <div
-                id={inflection}
-                onClick={() => setSkillsSelected(!skillsSelected)}
-                className="language-detail-inflection-dot"
-                style={{
-                  backgroundColor: skillsSelected ? "red" : "",
-                  transition: "transform 150ms ease",
-                }}
-              ></div>
-            </li>
+            <Proficiency />
+            <Infection />
           </ul>
         </div>
         <div className="row-language-details">
           <ul className="language-details-list-2">
-            <li className="language-details-list-item">
-              {" "}
-              spoken {spoken}
-              <div
-                id={spoken}
-                onClick={() => setSkillsSelected(!skillsSelected)}
-                className="language-detail-dot"
-                style={{
-                  backgroundColor: skillsSelected ? "red" : "",
-                  transition: "transform 150ms ease",
-                }}
-              ></div>
-            </li>
-            <li className="language-details-list-item">
-              {" "}
-              written{written}
-              <div
-                id={written}
-                onClick={() => setSkillsSelected(!skillsSelected)}
-                className="language-detail-written-dot"
-                style={{
-                  backgroundColor: skillsSelected ? "red" : "",
-                  transition: "transform 150ms ease",
-                }}
-              ></div>
-            </li>
+            <Spoken spoken={spoken} />
+            <Written written={written} />
           </ul>
         </div>
       </div>
@@ -139,7 +91,7 @@ export default function Languagedetail({
       )}
       <div
         className="add-language-click-container"
-        onClick={() => setSkillsSelected(!skillsSelected)}
+        onClick={() => setpropertySelected(!propertySelected)}
       >
         <p className="add-language">add to my languages</p>
       </div>
