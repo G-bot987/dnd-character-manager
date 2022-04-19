@@ -1,8 +1,8 @@
-import React from "react";
-import { useState } from "react";
-
-export default function Proficiency({ proficiency }) {
-  const [propertySelected, setpropertySelected] = useState(() => {});
+export default function Proficiency({
+  proficiency,
+  setProficiencyState,
+  proficiencyState,
+}) {
   console.log(proficiency);
   return (
     <li className="language-details-list-item">
@@ -10,10 +10,10 @@ export default function Proficiency({ proficiency }) {
       proficiency{proficiency}
       <div
         id={proficiency}
-        onClick={() => setpropertySelected(!propertySelected)}
+        onClick={() => setProficiencyState(!proficiencyState)}
         className="language-detail-dot"
         style={{
-          backgroundColor: propertySelected ? "red" : "",
+          backgroundColor: proficiencyState ? "red" : "",
           transition: "transform 150ms ease",
         }}
       ></div>

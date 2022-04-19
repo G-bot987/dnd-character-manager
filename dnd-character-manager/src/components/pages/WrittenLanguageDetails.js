@@ -1,10 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-export default function Written({ written }) {
-  const [propertySelected, setpropertySelected] = useState(() => {
-
-  });
+export default function Written({ written, SetWrittenState, writtenState }) {
   console.log(written);
   return (
     <li className="language-details-list-item">
@@ -12,10 +9,10 @@ export default function Written({ written }) {
       written{written}
       <div
         id={written}
-        onClick={() => setpropertySelected(!propertySelected)}
+        onClick={() => SetWrittenState(!writtenState)}
         className="language-detail-written-dot"
         style={{
-          backgroundColor: propertySelected ? "red" : "",
+          backgroundColor: writtenState ? "red" : "",
           transition: "transform 150ms ease",
         }}
       ></div>
