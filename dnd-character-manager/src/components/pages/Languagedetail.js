@@ -17,51 +17,62 @@ export default function Languagedetail({
 }) {
   // inflection
   const [inflectionState, setInflectionState] = useState(() => {
-    const saved = localStorage.getItem("inflection");
+    const saved = localStorage.getItem(language.language + "inflection");
     console.log("inflection saved ", saved);
     const initialValue = JSON.parse(saved);
     return initialValue || false;
   });
   useEffect(() => {
     // storing selected skill
-    localStorage.setItem("inflection", JSON.stringify(inflectionState));
+    localStorage.setItem(
+      language.language + "inflection",
+      JSON.stringify(inflectionState)
+    );
   }, [inflectionState]);
 
   // proficiency
   const [proficiencyState, setProficiencyState] = useState(() => {
-    const saved = localStorage.getItem("proficiency");
+    const saved = localStorage.getItem(language.language + "proficiency");
     console.log("proficiency saved ", saved);
     const initialValue = JSON.parse(saved);
     return initialValue || false;
   });
   useEffect(() => {
     // storing selected skill
-    localStorage.setItem("proficiency", JSON.stringify(proficiencyState));
+    localStorage.setItem(
+      language.language + "proficiency",
+      JSON.stringify(proficiencyState)
+    );
   }, [proficiencyState]);
 
-
-// spoken
+  // spoken
   const [spokenState, setSpokenState] = useState(() => {
-    const saved = localStorage.getItem("spoken");
+    const saved = localStorage.getItem(language.language + "spoken");
     console.log("spoken saved ", saved);
     const initialValue = JSON.parse(saved);
     return initialValue || false;
   });
   useEffect(() => {
     // storing spoken
-    localStorage.setItem("spoken", JSON.stringify(spokenState));
+    localStorage.setItem(
+      language.language + "spoken",
+      JSON.stringify(spokenState)
+    );
   }, [spokenState]);
 
-// written 
-  const [ writtenState, SetWrittenState ] = useState(() => {
-    const saved = localStorage.getItem("written");
+  // written
+  const [writtenState, SetWrittenState] = useState(() => {
+    const saved = localStorage.getItem(language.language + "written");
     console.log("written saved ", saved);
     const initialValue = JSON.parse(saved);
     return initialValue || false;
   });
   useEffect(() => {
     // storing spoken
-    localStorage.setItem("written", JSON.stringify(writtenState));
+    localStorage.setItem(
+      language.language + "written",
+      JSON.stringify(writtenState)
+    );
   }, [writtenState]);
 
   //  making sure dialect is array when none exist instead of undefined
@@ -95,7 +106,11 @@ export default function Languagedetail({
               setSpokenState={setSpokenState}
               spokenState={spokenState}
             />
-            <Written written={written} SetWrittenState={SetWrittenState} writtenState={writtenState} />
+            <Written
+              written={written}
+              SetWrittenState={SetWrittenState}
+              writtenState={writtenState}
+            />
           </ul>
         </div>
       </div>
