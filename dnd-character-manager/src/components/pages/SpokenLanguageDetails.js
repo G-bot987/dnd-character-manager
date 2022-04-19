@@ -1,8 +1,4 @@
-import React from "react";
-import { useState } from "react";
-
-export default function Spoken({ spoken }) {
-  const [propertySelected, setpropertySelected] = useState(() => {});
+export default function Spoken({ spoken, setSpokenState, spokenState }) {
   console.log(spoken);
   return (
     <li className="language-details-list-item">
@@ -10,10 +6,10 @@ export default function Spoken({ spoken }) {
       Spoken{spoken}
       <div
         id={spoken}
-        onClick={() => setpropertySelected(!propertySelected)}
+        onClick={() => setSpokenState(!spokenState)}
         className="language-detail-dot"
         style={{
-          backgroundColor: propertySelected ? "red" : "",
+          backgroundColor: spokenState ? "red" : "",
           transition: "transform 150ms ease",
         }}
       ></div>

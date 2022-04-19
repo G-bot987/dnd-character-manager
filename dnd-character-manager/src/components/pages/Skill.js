@@ -12,7 +12,7 @@ export default function Skill({ name }) {
   useEffect(() => {
     // storing selected skill
     localStorage.setItem(name, JSON.stringify(skillsSelected));
-  }, [skillsSelected]);
+  }, [skillsSelected, name]);
 
   return (
     <>

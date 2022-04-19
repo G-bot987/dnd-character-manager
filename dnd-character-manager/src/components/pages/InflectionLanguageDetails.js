@@ -1,8 +1,8 @@
-import React from "react";
-import { useState } from "react";
-
-export default function Infection({ inflection }) {
-  const [propertySelected, setpropertySelected] = useState(() => {});
+export default function Infection({
+  inflection,
+  setInflectionState,
+  inflectionState,
+}) {
   console.log(inflection);
   return (
     <li className="language-details-list-item">
@@ -10,10 +10,10 @@ export default function Infection({ inflection }) {
       inflection{inflection}
       <div
         id={inflection}
-        onClick={() => setpropertySelected(!propertySelected)}
+        onClick={() => setInflectionState(!inflectionState)}
         className="language-detail-inflection-dot"
         style={{
-          backgroundColor: propertySelected ? "red" : "",
+          backgroundColor: inflectionState ? "red" : "",
           transition: "transform 150ms ease",
         }}
       ></div>
