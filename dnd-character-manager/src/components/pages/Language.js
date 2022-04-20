@@ -87,9 +87,9 @@ export default function Language({ language }) {
           </div>
           {show ? (
             <div>
-              {language.dialect.map((language, index) => (
+              {language.dialect.map((dialect, index) => (
                 <ul className="dialects-list" key={index}>
-                  <LanguageWithDialect language={language} index={index} />
+                  <LanguageWithDialect dialect={dialect} index={index} />
                 </ul>
               ))}
             </div>
