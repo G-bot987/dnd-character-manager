@@ -3,7 +3,6 @@ export default function Infection({
   setInflectionState,
   inflectionState,
 }) {
-  console.log(inflection);
   return (
     <li className="language-details-list-item">
       {" "}
