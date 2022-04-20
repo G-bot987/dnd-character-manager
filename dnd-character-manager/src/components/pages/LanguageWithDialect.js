@@ -60,39 +60,73 @@ export default function LanguageNoDialectsDetails({ dialect }) {
     );
   }, [writtenState]);
 
+  const [show, setShow] = useState(false);
+
   return (
     <div className="language-detail-box">
-      <div>{dialect.name}</div>
-      <div className="first-row">
-        <div className="row-language-details">
-          <ul className="language-details-list">
-            <Proficiency
-              proficiency={dialect.proficiency}
-              setProficiencyState={setProficiencyState}
-              proficiencyState={proficiencyState}
-            />
-            <Infection
-              inflection={dialect.inflection}
-              setInflectionState={setInflectionState}
-              inflectionState={inflectionState}
-            />
-          </ul>
+      <div onClick={() => setShow(!show)} className="click-container">
+        <div
+          className="arrow-container"
+          style={{
+            marginTop: show ? "0.3rem " : "",
+          }}
+        >
+          <div
+            className="language-detail-arrow-down"
+            style={{
+              transform: show ? "rotate(225deg)" : "",
+              transition: "transform 150ms ease",
+            }}
+          ></div>
         </div>
-        <div className="row-language-details">
-          <ul className="language-details-list-2">
-            <Spoken
-              spoken={dialect.spoken}
-              setSpokenState={setSpokenState}
-              spokenState={spokenState}
-            />
-            <Written
-              written={dialect.written}
-              SetWrittenState={SetWrittenState}
-              writtenState={writtenState}
-            />
-          </ul>
+        {dialect.name}
+        <div
+          className="arrow-container"
+          style={{
+            marginTop: show ? "0.3rem " : "",
+          }}
+        >
+          <div
+            className="language-detail-arrow-down"
+            style={{
+              transform: show ? "rotate(225deg)" : "",
+              transition: "transform 150ms ease",
+            }}
+          ></div>
         </div>
       </div>
+      {show ? (
+        <div className="first-row">
+          <div className="row-language-details">
+            <ul className="language-details-list">
+              <Proficiency
+                proficiency={dialect.proficiency}
+                setProficiencyState={setProficiencyState}
+                proficiencyState={proficiencyState}
+              />
+              <Infection
+                inflection={dialect.inflection}
+                setInflectionState={setInflectionState}
+                inflectionState={inflectionState}
+              />
+            </ul>
+          </div>
+          <div className="row-language-details">
+            <ul className="language-details-list-2">
+              <Spoken
+                spoken={dialect.spoken}
+                setSpokenState={setSpokenState}
+                spokenState={spokenState}
+              />
+              <Written
+                written={dialect.written}
+                SetWrittenState={SetWrittenState}
+                writtenState={writtenState}
+              />
+            </ul>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
