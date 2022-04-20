@@ -5,24 +5,15 @@ import Written from "./WrittenLanguageDetails";
 import Spoken from "./SpokenLanguageDetails";
 import Proficiency from "./ProficiencyLanguageDetails";
 import Infection from "./InflectionLanguageDetails";
-export default function LanguageNoDialectsDetails({
-  language,
-  inflection,
-  spoken,
-  written,
-  proficiency,
-  dialect,
-  key,
-}) {
+export default function LanguageNoDialectsDetails({ language }) {
   // inflection
   const [inflectionState, setInflectionState] = useState(() => {
     const saved = localStorage.getItem(language.language + "inflection");
-    // console.log("inflection saved ", saved);
     const initialValue = JSON.parse(saved);
     return initialValue || false;
   });
   useEffect(() => {
-    // storing selected skill
+    // storing inflection
     localStorage.setItem(
       language.language + "inflection",
       JSON.stringify(inflectionState)
@@ -32,7 +23,6 @@ export default function LanguageNoDialectsDetails({
   // proficiency
   const [proficiencyState, setProficiencyState] = useState(() => {
     const saved = localStorage.getItem(language.language + "proficiency");
-    // console.log("proficiency saved ", saved);
     const initialValue = JSON.parse(saved);
     return initialValue || false;
   });
@@ -47,7 +37,6 @@ export default function LanguageNoDialectsDetails({
   // spoken
   const [spokenState, setSpokenState] = useState(() => {
     const saved = localStorage.getItem(language.language + "spoken");
-    // console.log("spoken saved ", saved);
     const initialValue = JSON.parse(saved);
     return initialValue || false;
   });
@@ -62,7 +51,6 @@ export default function LanguageNoDialectsDetails({
   // written
   const [writtenState, SetWrittenState] = useState(() => {
     const saved = localStorage.getItem(language.language + "written");
-    // console.log("written saved ", saved);
     const initialValue = JSON.parse(saved);
     return initialValue || false;
   });
@@ -74,37 +62,18 @@ export default function LanguageNoDialectsDetails({
     );
   }, [writtenState]);
 
-  const [show, setShow] = useState(false);
-
-  // dialect
-  const [dialectState, SetDialectState] = useState(() => {
-    const saved = localStorage.getItem(language.language + "dialect");
-    // console.log("dialect saved ", saved);
-    const initialValue = JSON.parse(saved);
-    return initialValue || false;
-  });
-  useEffect(() => {
-    // storing dialect
-    localStorage.setItem(
-      language.language + "dialect",
-      JSON.stringify(dialectState)
-    );
-  }, [dialectState]);
-
-  //  making sure dialect is array when none exist instead of undefined
-
   return (
     <div className="language-detail-box">
       <div className="first-row">
         <div className="row-language-details">
           <ul className="language-details-list">
             <Proficiency
-              proficiency={proficiency}
+              proficiency={language.proficiency}
               setProficiencyState={setProficiencyState}
               proficiencyState={proficiencyState}
             />
             <Infection
-              inflection={inflection}
+              inflection={language.inflection}
               setInflectionState={setInflectionState}
               inflectionState={inflectionState}
             />
@@ -113,12 +82,12 @@ export default function LanguageNoDialectsDetails({
         <div className="row-language-details">
           <ul className="language-details-list-2">
             <Spoken
-              spoken={spoken}
+              spoken={language.spoken}
               setSpokenState={setSpokenState}
               spokenState={spokenState}
             />
             <Written
-              written={written}
+              written={language.written}
               SetWrittenState={SetWrittenState}
               writtenState={writtenState}
             />
