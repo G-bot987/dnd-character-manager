@@ -6,7 +6,6 @@ import "./language.css";
 
 export default function Language({ language }) {
   const [show, setShow] = useState(false);
-
   if (!language.dialect) {
     return (
       <div className="language-box">
@@ -89,7 +88,11 @@ export default function Language({ language }) {
             <div>
               {language.dialect.map((dialect, index) => (
                 <ul className="dialects-list" key={index}>
-                  <LanguageWithDialect dialect={dialect} index={index} />
+                  <LanguageWithDialect
+                    dialect={dialect}
+                    index={index}
+                    language={language}
+                  />
                 </ul>
               ))}
             </div>
