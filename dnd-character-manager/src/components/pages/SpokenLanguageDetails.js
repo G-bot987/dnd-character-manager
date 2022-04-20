@@ -1,5 +1,4 @@
 export default function Spoken({ spoken, setSpokenState, spokenState }) {
-  console.log(spoken);
   return (
     <li className="language-details-list-item">
       {" "}

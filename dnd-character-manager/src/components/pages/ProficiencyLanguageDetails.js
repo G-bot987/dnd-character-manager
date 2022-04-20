@@ -3,7 +3,6 @@ export default function Proficiency({
   setProficiencyState,
   proficiencyState,
 }) {
-  console.log(proficiency);
   return (
     <li className="language-details-list-item">
       {" "}
