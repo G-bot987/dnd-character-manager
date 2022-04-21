@@ -7,7 +7,6 @@ import Proficiency from "./ProficiencyLanguageDetails";
 import Infection from "./InflectionLanguageDetails";
 
 export default function LanguageNoDialectsDetails({ dialect, language }) {
-  console.log("dia in langdia" + JSON.stringify(language));
   // inflection
   const [inflectionState, setInflectionState] = useState(() => {
     const saved = localStorage.getItem(
@@ -66,7 +65,6 @@ export default function LanguageNoDialectsDetails({ dialect, language }) {
   });
   useEffect(() => {
     // storing written
-    console.log("logging dia+name", dialect.written);
 
     localStorage.setItem(
       language.language + dialect.name + "written",
