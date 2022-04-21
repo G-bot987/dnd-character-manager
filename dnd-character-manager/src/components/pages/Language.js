@@ -96,9 +96,7 @@ export default function Language({ language }) {
                 </ul>
               ))}
             </div>
-          ) : // <LanguageWithDialect language={language} />
-
-          null}
+          ) : null}
         </li>
       </ul>
     </div>
