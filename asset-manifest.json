@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/dnd-character-manager/static/css/main.4944efcf.css",
-    "main.js": "/dnd-character-manager/static/js/main.f3434b68.js",
+    "main.js": "/dnd-character-manager/static/js/main.fbb626ac.js",
     "static/js/787.564fe9fa.chunk.js": "/dnd-character-manager/static/js/787.564fe9fa.chunk.js",
     "static/media/nimrodel.png": "/dnd-character-manager/static/media/nimrodel.dd9afc15caa6fe5d2227.png",
     "index.html": "/dnd-character-manager/index.html",
     "main.4944efcf.css.map": "/dnd-character-manager/static/css/main.4944efcf.css.map",
-    "main.f3434b68.js.map": "/dnd-character-manager/static/js/main.f3434b68.js.map",
+    "main.fbb626ac.js.map": "/dnd-character-manager/static/js/main.fbb626ac.js.map",
     "787.564fe9fa.chunk.js.map": "/dnd-character-manager/static/js/787.564fe9fa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4944efcf.css",
-    "static/js/main.f3434b68.js"
+    "static/js/main.fbb626ac.js"
   ]
 }
