@@ -344,8 +344,6 @@ export const template = {
       ],
     },
 
-
-
     {
       attribute: "mobile",
       affects: [
@@ -359,6 +357,25 @@ export const template = {
         },
         {
           affect: " don't provoke opportunity attacks in melee",
+          bonus: null,
+        },
+      ],
+    },
+
+    {
+      attribute: "Grappler",
+      prerequiste: {
+        defined: "strength of 13 or greater",
+        attribute: { required: "strength", index: 5, score: 13 },
+      },
+
+      affects: [
+        {
+          affect: "You have advantage on attack rolls when grappling",
+          bonus: null,
+        },
+        {
+          affect: " can try to restrain a creature grappled by you",
           bonus: null,
         },
       ],
