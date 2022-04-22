@@ -1,14 +1,12 @@
-import { useState } from "react";
 import "./languages.css";
 
-export default function UserLanguageSelections(selectionName, proficency, key) {
-  console.log("sec.pr " + typeof selectionName.proficency);
+export default function UserLanguageSelections(selectionName, key) {
   if (selectionName.proficency === "false") {
     return null;
   }
 
   return (
-    <li>
+    <li key={key}>
       {selectionName.selectionName}
       selected
       {selectionName.proficency}
