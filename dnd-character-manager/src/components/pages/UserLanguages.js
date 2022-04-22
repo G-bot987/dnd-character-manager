@@ -6,16 +6,6 @@ export default function UserLanguages() {
   const [show, setShow] = useState(false);
 
   const items = { ...localStorage };
-  // console.log("items" + JSON.stringify(items));
-
-  const itemArray = [];
-  for (var i = 0, len = localStorage.length; i < len; ++i) {
-    // console.log(localStorage.getItem(localStorage.key(i)));
-    const preparsed = localStorage.getItem(localStorage.key(i));
-    const parsed = JSON.parse(preparsed);
-    itemArray.push(preparsed);
-  }
-  console.log("itemArray" + itemArray);
 
   return (
     <div>
