@@ -582,6 +582,60 @@ export const template = {
       },
     ],
   },
+
+  feats: [
+    {
+      attribute: "duel weilder",
+      affects: [
+        {
+          affect: "+1 to AC if you're wielding a melee weapon in each hand",
+          bonus: null,
+        },
+        {
+          affect:
+            "two-weapon fighting with non-light weapon, draw two weapons.",
+          bonus: null,
+        },
+      ],
+    },
+
+    {
+      attribute: "mobile",
+      affects: [
+        {
+          affect: "your speed increases by 10ft",
+          bonus: null,
+        },
+        {
+          affect: " you can Dash on difficult terrain without malus",
+          bonus: null,
+        },
+        {
+          affect: " don't provoke opportunity attacks in melee",
+          bonus: null,
+        },
+      ],
+    },
+
+    {
+      attribute: "Grappler",
+      prerequiste: {
+        defined: "strength of 13 or greater",
+        attribute: { required: "strength", index: 5, score: 13 },
+      },
+
+      affects: [
+        {
+          affect: "You have advantage on attack rolls when grappling",
+          bonus: null,
+        },
+        {
+          affect: " can try to restrain a creature grappled by you",
+          bonus: null,
+        },
+      ],
+    },
+  ],
 };
 
 // cloned template with spread, spread is a powerful operator.
